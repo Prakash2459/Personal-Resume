@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #7c3aed; /* violet-600 */
+  --accent-2: #06b6d4; /* cyan-500 */
 }
 
 @theme inline {
@@ -20,7 +22,47 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(1200px 600px at -10% -10%, color-mix(in oklab, var(--accent) 25%, transparent) 0%, transparent 60%),
+    radial-gradient(1000px 500px at 110% -10%, color-mix(in oklab, var(--accent-2) 20%, transparent) 0%, transparent 60%),
+    linear-gradient(180deg, color-mix(in oklab, var(--background) 90%, #0000) 0%, var(--background) 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Utility: glass and card surfaces */
+.glass {
+  background: color-mix(in oklab, var(--background) 70%, transparent);
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+}
+
+.card {
+  border: 1px solid color-mix(in oklab, var(--foreground) 10%, transparent);
+  background: color-mix(in oklab, var(--background) 96%, transparent);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  border-color: color-mix(in oklab, var(--foreground) 16%, transparent);
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+.fade-in-up { animation: fade-in-up 600ms ease forwards; }
+.float-slow { animation: float 6s ease-in-out infinite; }
