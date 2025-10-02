@@ -64,6 +64,7 @@ export default function Home() {
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
               <li>Built secure video storage using blockchain and IPFS with smart contracts.</li>
+              <li>Immutable, decentralized storage via on-chain references and content addressing.</li>
               <li>Integrated with IoT devices for real-time video storage and retrieval.</li>
             </ul>
           </div>
@@ -73,6 +74,7 @@ export default function Home() {
               <h4 className="font-medium">Cost‑Effective Optimized Firewall for SOHO Networks (Raspberry Pi)</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
+              <li>Designed and deployed on Raspberry Pi for SOHO environments.</li>
               <li>Traffic filtering, monitoring, and intrusion detection for SOHO networks.</li>
               <li>Optimized cost and performance on Raspberry Pi hardware.</li>
             </ul>
@@ -83,7 +85,7 @@ export default function Home() {
               <h4 className="font-medium">Machine Learning‑Based Real‑Time Network Security Firewall</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>Achieved ~98% accuracy in detecting threats and auto‑blocked IPs via iptables.</li>
+              <li>ML‑driven packet classification with ~98% accuracy; auto‑blocked IPs via iptables.</li>
               <li>Integrated real‑time packet capture for enhanced security.</li>
             </ul>
           </div>
@@ -104,6 +106,7 @@ export default function Home() {
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
               <li>Chat‑like interface converts spreadsheets into SQLite and queries via AI agent (n8n).</li>
+              <li>Automated data retrieval and processing from user prompts.</li>
               <li>Dynamic chart generation using a self‑hosted QuickChart server.</li>
             </ul>
           </div>
@@ -115,6 +118,7 @@ export default function Home() {
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
               <li>Integrated 32″ touchscreen, webcam, thermal printer with a custom web UI.</li>
               <li>Printed order slips for streamlined customer flow and payment.</li>
+              <li>Improved efficiency by reducing front‑desk queues and wait times.</li>
             </ul>
           </div>
 
@@ -123,7 +127,8 @@ export default function Home() {
               <h4 className="font-medium">IoT Water Quality Monitoring (Arduino & ESP32)</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>Real‑time pH and flow monitoring with data sent to a web platform.</li>
+              <li>Implemented real‑time tracking of pH and water flow rates.</li>
+              <li>Sent sensor data to a web platform for analysis and visualization.</li>
             </ul>
           </div>
 
@@ -152,6 +157,7 @@ export default function Home() {
               <h4 className="font-medium">ESP8266 LED Cube with Custom Circuit</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
+              <li>Custom circuit to control bottom, top, and vertical LED strips independently.</li>
               <li>Individually controlled LED planes; custom power design on 3.7V batteries.</li>
             </ul>
           </div>
@@ -177,6 +183,18 @@ export default function Home() {
           <p className="mt-1">
             I design and build embedded systems and Raspberry Pi projects, develop websites and Android apps with Flutter, and fine‑tune AI models.
           </p>
+        </div>
+      </section>
+
+      <section className="mb-2 card p-6 fade-in-up" style={{animationDelay: '380ms'}}>
+        <h3 className="text-base font-semibold">GitHub</h3>
+        <p className="mt-2 text-sm text-black/80 dark:text-white/80">
+          Explore more projects and code on my GitHub profile.
+        </p>
+        <div className="mt-3">
+          <a className="inline-flex items-center gap-2 rounded-full border border-black/[.08] dark:border-white/[.145] px-4 py-2 text-sm hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a]" href="https://github.com/Prakash2459" target="_blank" rel="noreferrer noopener">
+            github.com/Prakash2459
+          </a>
         </div>
       </section>
     </div>
