@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import StructuredData from "./structured-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -82,52 +83,6 @@ export const metadata: Metadata = {
   },
 };
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Jambula Venkata Jaya Prakash Reddy",
-  "jobTitle": "Computer Science Engineer & Full Stack Developer",
-  "description": "Computer Science Engineer specializing in embedded systems, IoT, blockchain technology, and full-stack development",
-  "url": "https://www.jayaprakash.space",
-  "email": "prakashprakash2459@gmail.com",
-  "telephone": "+91-93470-26387",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Hyderabad",
-    "addressCountry": "India"
-  },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Mahatma Gandhi Institute of Technology"
-  },
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Neonflake Enterprises OPC Pvt Ltd"
-  },
-  "knowsAbout": [
-    "Computer Science",
-    "Embedded Systems",
-    "IoT Development",
-    "Blockchain Technology",
-    "Machine Learning",
-    "Full Stack Development",
-    "Python Programming",
-    "Java Programming",
-    "React Development",
-    "Raspberry Pi Development"
-  ],
-  "award": [
-    "1st Place - Intra Institution Innovation Competition and Hackathon (MGIT, 2023)",
-    "1st Place - Idea Pitching Contest at Idea Incubator (MGIT, 2023)",
-    "2nd Place - Smart India Hackathon 2023 (Finals)"
-  ],
-  "sameAs": [
-    "https://github.com/Prakash2459",
-    "https://www.jayaprakash.space",
-    "https://www.linkedin.com/in/jambula-venkata-jaya-prakash-reddy"
-  ]
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -135,13 +90,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <StructuredData />
         <div className="min-h-screen text-foreground">
           <header className="sticky top-0 z-10 glass border-b border-black/[.08] dark:border-white/[.145]">
             <div className="mx-auto max-w-4xl px-6 py-5 flex flex-col gap-1">
@@ -153,6 +103,8 @@ export default function RootLayout({
                 <a className="underline underline-offset-4 hover:opacity-80" href="tel:+919347026387">+91 93470 26387</a>
                 <span className="mx-2">·</span>
                 <a className="underline underline-offset-4 hover:opacity-80" href="https://www.jayaprakash.space" target="_blank" rel="noreferrer noopener">jayaprakash.space</a>
+                <span className="mx-2">·</span>
+                <a className="underline underline-offset-4 hover:opacity-80" href="https://www.linkedin.com/in/jaya-prakash-jaya-prakash-127757233" target="_blank" rel="noreferrer noopener">LinkedIn</a>
                 <span className="mx-2">·</span>
                 <a className="underline underline-offset-4 hover:opacity-80" href="https://github.com/Prakash2459" target="_blank" rel="noreferrer noopener">GitHub</a>
               </p>
@@ -167,6 +119,7 @@ export default function RootLayout({
               <nav className="flex gap-4">
                 <a className="hover:underline underline-offset-4" href="mailto:prakashprakash2459@gmail.com">Email</a>
                 <a className="hover:underline underline-offset-4" href="https://www.jayaprakash.space" target="_blank" rel="noreferrer noopener">Website</a>
+                <a className="hover:underline underline-offset-4" href="https://www.linkedin.com/in/jaya-prakash-jaya-prakash-127757233" target="_blank" rel="noreferrer noopener">LinkedIn</a>
                 <a className="hover:underline underline-offset-4" href="https://github.com/Prakash2459" target="_blank" rel="noreferrer noopener">GitHub</a>
               </nav>
             </div>

@@ -77,7 +77,7 @@ export default function Home() {
             <div>
               <div className="flex items-baseline justify-between">
                 <span className="font-medium">Narayana School</span>
-                <span className="text-xs text-black/60 dark:text-white/60">—</span>
+                <span className="text-xs text-black/60 dark:text-white/60">2019</span>
               </div>
               <div>10th Grade · GPA: 9.3</div>
             </div>
@@ -99,40 +99,43 @@ export default function Home() {
               <h4 className="font-medium">Blockchain-Based Secure Video Storage System for IoT Networks</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>Built secure video storage using blockchain and IPFS with smart contracts.</li>
-              <li>Immutable, decentralized storage via on-chain references and content addressing.</li>
-              <li>Integrated with IoT devices for real-time video storage and retrieval.</li>
+              <li>Developed a secure video storage system using blockchain and IPFS technology.</li>
+              <li>Implemented smart contracts for immutable and decentralized video storage with on-chain references.</li>
+              <li>Integrated seamlessly with IoT devices for real-time video storage and retrieval capabilities.</li>
             </ul>
           </div>
 
           <div>
             <div className="flex items-baseline justify-between">
-              <h4 className="font-medium">Cost‑Effective Optimized Firewall for SOHO Networks (Raspberry Pi)</h4>
+              <h4 className="font-medium">Cost-Effective Optimized Firewall for SOHO Networks Using Raspberry Pi</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>Designed and deployed on Raspberry Pi for SOHO environments.</li>
-              <li>Traffic filtering, monitoring, and intrusion detection for SOHO networks.</li>
-              <li>Optimized cost and performance on Raspberry Pi hardware.</li>
+              <li>Designed a comprehensive firewall solution using Raspberry Pi to protect small office/home networks.</li>
+              <li>Implemented advanced traffic filtering, network monitoring, and intrusion detection capabilities.</li>
+              <li>Optimized cost and performance specifically for SOHO environments with resource constraints.</li>
             </ul>
           </div>
 
           <div>
             <div className="flex items-baseline justify-between">
-              <h4 className="font-medium">Machine Learning‑Based Real‑Time Network Security Firewall</h4>
+              <h4 className="font-medium">Machine Learning-Based Real-Time Network Security Firewall</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>ML‑driven packet classification with ~98% accuracy; auto‑blocked IPs via iptables.</li>
-              <li>Integrated real‑time packet capture for enhanced security.</li>
+              <li>Created an intelligent firewall leveraging machine learning to detect and block malicious traffic.</li>
+              <li>Achieved 98% accuracy in identifying threats and automatically blocked IPs using iptables.</li>
+              <li>Integrated real-time packet capturing for enhanced network security and threat analysis.</li>
             </ul>
           </div>
 
           <div>
             <div className="flex items-baseline justify-between">
-              <h4 className="font-medium">Smart Face Detection & Visitor Tracking (Raspberry Pi Zero 2 W)</h4>
+              <h4 className="font-medium">Smart Face Detection & Visitor Tracking System using Raspberry Pi Zero 2 W</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>YOLO11n‑based face detection with distance estimation and range‑aware storage.</li>
-              <li>Visitor recognition via matching detections with stored entries.</li>
+              <li>Built a video capture system with Raspberry Pi Zero 2 W, 5MP camera, and MediaMTX streaming.</li>
+              <li>Applied deep learning-based YOLO11n face detection with distance estimation using pixel area.</li>
+              <li>Cropped and stored face images in database only if within range, enabling efficient storage.</li>
+              <li>Implemented visitor recognition by matching new detections with stored entries to track repeat visits.</li>
             </ul>
           </div>
 
@@ -141,60 +144,66 @@ export default function Home() {
               <h4 className="font-medium">Intelligent Spreadsheet Query & Visualization Platform</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>Chat‑like interface converts spreadsheets into SQLite and queries via AI agent (n8n).</li>
-              <li>Automated data retrieval and processing from user prompts.</li>
-              <li>Dynamic chart generation using a self‑hosted QuickChart server.</li>
+              <li>Built a web platform where users upload spreadsheets and interact through natural language prompts, similar to a chatbot.</li>
+              <li>Converted spreadsheets into SQLite tables in the backend for structured querying by an AI agent built with n8n.</li>
+              <li>Automated data retrieval and processing from user prompts, enabling conversational access to spreadsheet data.</li>
+              <li>Integrated a self-hosted QuickChart server for dynamic chart generation, allowing users to visualize query results seamlessly.</li>
             </ul>
           </div>
 
           <div>
             <div className="flex items-baseline justify-between">
-              <h4 className="font-medium">Self‑Service SPA Kiosk Machine</h4>
+              <h4 className="font-medium">Self-Service SPA Kiosk Machine</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>Integrated 32″ touchscreen, webcam, thermal printer with a custom web UI.</li>
-              <li>Printed order slips for streamlined customer flow and payment.</li>
-              <li>Improved efficiency by reducing front‑desk queues and wait times.</li>
+              <li>Integrated hardware suite: 32″ capacitive touchscreen, 32″ display, PC, webcam and thermal printer.</li>
+              <li>Custom web interface lets customers browse services, select massage types and add-ons.</li>
+              <li>Generates and prints thermal order slips on demand for seamless payment processing.</li>
+              <li>Improves SPA efficiency by reducing front-desk queues and accelerating customer flow.</li>
             </ul>
           </div>
 
           <div>
             <div className="flex items-baseline justify-between">
-              <h4 className="font-medium">IoT Water Quality Monitoring (Arduino & ESP32)</h4>
+              <h4 className="font-medium">IoT Water Quality Monitoring System with Arduino and ESP32</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>Implemented real‑time tracking of pH and water flow rates.</li>
-              <li>Sent sensor data to a web platform for analysis and visualization.</li>
+              <li>Built an IoT-based water monitoring system using Arduino and ESP32 microcontrollers.</li>
+              <li>Implemented real-time tracking of pH levels and water flow rates with high precision sensors.</li>
+              <li>Sent sensor data to a web platform for graphical analysis and monitoring dashboard.</li>
             </ul>
           </div>
 
           <div>
             <div className="flex items-baseline justify-between">
-              <h4 className="font-medium">Home Gym Machine (BLDC + ODrive)</h4>
+              <h4 className="font-medium">Home Gym Machine</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>Up to 80 kg simulated resistance with BLE telemetry to Flutter Android app.</li>
-              <li>Remote resistance adjustment and live workout feedback.</li>
+              <li>Simulates up to 80 kg of resistance via a BLDC motor and ODrive controller.</li>
+              <li>Uses ESP32 over BLE to stream range-of-motion graphs and rep counts to a Flutter Android app.</li>
+              <li>Allows remote resistance adjustment and live workout feedback for enhanced training experience.</li>
             </ul>
           </div>
 
           <div>
             <div className="flex items-baseline justify-between">
-              <h4 className="font-medium">ESP32‑Based Health Monitoring with Ayurveda Analysis</h4>
+              <h4 className="font-medium">ESP32-Based Health Monitoring Device with Ayurveda Analysis</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>ESP32 + MAX30100 wearable measuring heart rate & SpO2.</li>
-              <li>Custom algorithm for Ayurveda assessment (Vata, Pitta, Kapha) with API integration.</li>
+              <li>Developed a wearable device using ESP32 and MAX30100 to monitor heart rate and SpO2 levels.</li>
+              <li>Implemented a custom algorithm for Ayurveda-based health analysis (Vata, Pitta, Kapha).</li>
+              <li>Built an API to send and receive user health data from a mobile application.</li>
             </ul>
           </div>
 
           <div>
             <div className="flex items-baseline justify-between">
-              <h4 className="font-medium">ESP8266 LED Cube with Custom Circuit</h4>
+              <h4 className="font-medium">ESP8266-Based LED Cube with Custom Circuit Design</h4>
             </div>
             <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-              <li>Custom circuit to control bottom, top, and vertical LED strips independently.</li>
-              <li>Individually controlled LED planes; custom power design on 3.7V batteries.</li>
+              <li>Designed and developed an LED Cube controlled using ESP8266 microcontroller.</li>
+              <li>Created a custom circuit to independently control bottom, top, and vertical LED strips.</li>
+              <li>Used 3.7V rechargeable batteries instead of 5V and successfully powered the LEDs with custom power design.</li>
             </ul>
           </div>
         </div>
@@ -252,7 +261,7 @@ export default function Home() {
             🐙 GitHub Profile
           </a>
           <a className="inline-flex items-center gap-2 rounded-full border border-black/[.08] dark:border-white/[.145] px-4 py-2 text-sm hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a]" 
-             href="https://www.linkedin.com/in/jambula-venkata-jaya-prakash-reddy" target="_blank" rel="noreferrer noopener"
+             href="https://www.linkedin.com/in/jaya-prakash-jaya-prakash-127757233" target="_blank" rel="noreferrer noopener"
              aria-label="Connect on LinkedIn">
             💼 LinkedIn
           </a>
