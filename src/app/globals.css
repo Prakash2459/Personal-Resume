@@ -3,25 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --accent: #7c3aed; /* violet-600 */
-  --accent-2: #06b6d4; /* cyan-500 */
+  --background: #191919;
+  --foreground: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #191919;
+    --foreground: #fff;
   }
 }
 
 body {
-  background:
-    radial-gradient(1200px 600px at -10% -10%, color-mix(in oklab, var(--accent) 25%, transparent) 0%, transparent 60%),
-    radial-gradient(1000px 500px at 110% -10%, color-mix(in oklab, var(--accent-2) 20%, transparent) 0%, transparent 60%),
-    linear-gradient(180deg, color-mix(in oklab, var(--background) 90%, #0000) 0%, var(--background) 100%);
-  background-attachment: fixed;
+  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -37,13 +31,13 @@ body {
   border: 1px solid color-mix(in oklab, var(--foreground) 10%, transparent);
   background: color-mix(in oklab, var(--background) 96%, transparent);
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(25,25,25,0.18);
   transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 16px 40px rgba(25,25,25,0.28);
   border-color: color-mix(in oklab, var(--foreground) 16%, transparent);
 }
 

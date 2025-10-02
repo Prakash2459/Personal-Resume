@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import StructuredData from "./structured-data";
+import BlackHoleSpaceBackground from "./BlackHoleSpaceBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -91,6 +92,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <BlackHoleSpaceBackground />
         <StructuredData />
         <div className="min-h-screen text-foreground">
           <header className="sticky top-0 z-10 glass border-b border-black/[.08] dark:border-white/[.145]">
@@ -100,7 +102,7 @@ export default function RootLayout({
                 Computer Science Engineer ·
                 <a className="underline underline-offset-4 hover:opacity-80 ml-1" href="mailto:prakashprakash2459@gmail.com">prakashprakash2459@gmail.com</a>
                 <span className="mx-2">·</span>
-                <a className="underline underline-offset-4 hover:opacity-80" href="tel:+919347026387">+91 93470 26387</a>
+                <a className="underline underline-offset-4 hover:opacity-80" href="tel:+919347026387">+91 9347026387</a>
                 <span className="mx-2">·</span>
                 <a className="underline underline-offset-4 hover:opacity-80" href="https://www.jayaprakash.space" target="_blank" rel="noreferrer noopener">jayaprakash.space</a>
                 <span className="mx-2">·</span>
