@@ -3,8 +3,24 @@ import React, { useRef, useEffect, useState } from "react";
 
 const STAR_COUNT = 2500;
 const MAX_ORBIT = 255;
-const CANVAS_BG = "rgba(25,25,25,1)";
 const STAR_COLOR = (alpha: number) => `rgba(255,255,255,${alpha})`;
+
+interface BlackHoleStar {
+  id: number;
+  orbital: number;
+  x: number;
+  y: number;
+  yOrigin: number;
+  speed: number;
+  rotation: number;
+  startRotation: number;
+  color: string;
+  hoverPos: number;
+  expansePos: number;
+  prevR: number;
+  prevX: number;
+  prevY: number;
+}
 
 const BlackHoleBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -13,7 +29,7 @@ const BlackHoleBackground: React.FC = () => {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   // Star data
-  const stars = useRef<any[]>([]);
+  const stars = useRef<BlackHoleStar[]>([]);
   const startTime = useRef<number>(Date.now());
   const currentTime = useRef<number>(0);
 
@@ -86,7 +102,8 @@ const BlackHoleBackground: React.FC = () => {
       const ny = (cos * (y - cy)) - (sin * (x - cx)) + cy;
       return [nx, ny];
     }
-    function drawStar(star: any) {
+    function drawStar(star: BlackHoleStar) {
+      if (!ctx) return;
       if (!expanse) {
         star.rotation = star.startRotation + (currentTime.current * star.speed);
         if (!collapse) {
@@ -117,6 +134,7 @@ const BlackHoleBackground: React.FC = () => {
       star.prevY = star.y;
     }
     function loop() {
+      if (!ctx) return;
       const now = Date.now();
       currentTime.current = (now - startTime.current) / 50;
       ctx.fillStyle = expanse ? 'rgba(25,25,25,0.08)' : 'rgba(25,25,25,0.2)';

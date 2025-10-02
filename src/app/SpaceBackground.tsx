@@ -66,6 +66,7 @@ const SpaceBackground: React.FC = () => {
     let lastTime = performance.now();
 
     function draw() {
+      if (!ctx) return;
       // Draw radial-gradient background
       const grad = ctx.createRadialGradient(
         width / 2,
@@ -134,6 +135,7 @@ const SpaceBackground: React.FC = () => {
     }
 
     function handleResize() {
+      if (!canvas || !ctx) return;
       width = window.innerWidth;
       height = window.innerHeight;
       dpr = window.devicePixelRatio || 1;

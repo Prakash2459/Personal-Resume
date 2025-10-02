@@ -1,12 +1,43 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 
-const BLACK = "#191919";
 const WHITE = "#fff";
 const STAR_COUNT = 120;
 const GALAXY_COUNT = 3;
 const BH_STAR_COUNT = 1200;
 const MAX_ORBIT = 255;
+
+interface Star {
+  x: number;
+  y: number;
+  r: number;
+  speed: number;
+  twinkle: number;
+}
+interface Galaxy {
+  x: number;
+  y: number;
+  r: number;
+  alpha: number;
+  speed: number;
+  angle: number;
+}
+interface BHStar {
+  id: number;
+  orbital: number;
+  x: number;
+  y: number;
+  yOrigin: number;
+  speed: number;
+  rotation: number;
+  startRotation: number;
+  color: string;
+  hoverPos: number;
+  expansePos: number;
+  prevR: number;
+  prevX: number;
+  prevY: number;
+}
 
 const BlackHoleSpaceBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -15,14 +46,14 @@ const BlackHoleSpaceBackground: React.FC = () => {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   // Black hole orbiting stars
-  const bhStars = useRef<any[]>([]);
+  const bhStars = useRef<BHStar[]>([]);
   const bhStartTime = useRef<number>(Date.now());
   const bhCurrentTime = useRef<number>(0);
 
   // Twinkling stars
-  const stars = useRef<any[]>([]);
+  const stars = useRef<Star[]>([]);
   // Galaxies
-  const galaxies = useRef<any[]>([]);
+  const galaxies = useRef<Galaxy[]>([]);
 
   // Responsive canvas
   useEffect(() => {
@@ -104,9 +135,6 @@ const BlackHoleSpaceBackground: React.FC = () => {
     const centerx = dimensions.width / 2;
     const centery = dimensions.height / 2;
 
-    function lerp(a: number, b: number, t: number) {
-      return a + (b - a) * t;
-    }
     function rotate(cx: number, cy: number, x: number, y: number, angle: number) {
       const cos = Math.cos(angle);
       const sin = Math.sin(angle);
@@ -115,6 +143,7 @@ const BlackHoleSpaceBackground: React.FC = () => {
       return [nx, ny];
     }
     function draw() {
+      if (!ctx) return;
       // Radial gradient background
       const grad = ctx.createRadialGradient(centerx, centery, 0, centerx, centery, Math.max(dimensions.width, dimensions.height) * 0.7);
       grad.addColorStop(0, "#222");
@@ -142,7 +171,7 @@ const BlackHoleSpaceBackground: React.FC = () => {
       });
 
       // Twinkling stars
-      stars.current.forEach((s, i) => {
+      stars.current.forEach((s) => {
         const twinkle = 0.7 + 0.3 * Math.sin(performance.now() * s.speed * 0.8 + s.twinkle);
         ctx.save();
         ctx.globalAlpha = twinkle;
