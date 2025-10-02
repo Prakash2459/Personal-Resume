@@ -1,34 +1,64 @@
 export default function Home() {
   return (
     <div className="max-w-none">
-      <div className="mb-8 grid gap-4 sm:grid-cols-3">
-        <a className="card fade-in-up p-4 text-sm text-center" style={{animationDelay: '0ms'}} href="mailto:prakashprakash2459@gmail.com">Email</a>
-        <a className="card fade-in-up p-4 text-sm text-center" style={{animationDelay: '80ms'}} href="https://www.jayaprakash.space" target="_blank" rel="noreferrer noopener">Website</a>
-        <a className="card fade-in-up p-4 text-sm text-center" style={{animationDelay: '160ms'}} href="https://github.com/Prakash2459" target="_blank" rel="noreferrer noopener">GitHub</a>
-      </div>
-      <section className="mb-8 card p-6 fade-in-up" style={{animationDelay: '120ms'}}>
-        <h2 className="text-lg font-semibold tracking-tight">Summary</h2>
+      {/* Quick Contact Links */}
+      <nav className="mb-8 grid gap-4 sm:grid-cols-3" role="navigation" aria-label="Contact Information">
+        <a className="card fade-in-up p-4 text-sm text-center" style={{animationDelay: '0ms'}} href="mailto:prakashprakash2459@gmail.com" aria-label="Send email to Jambula Venkata Jaya Prakash Reddy">📧 Email</a>
+        <a className="card fade-in-up p-4 text-sm text-center" style={{animationDelay: '80ms'}} href="https://www.jayaprakash.space" target="_blank" rel="noreferrer noopener" aria-label="Visit personal website">🌐 Website</a>
+        <a className="card fade-in-up p-4 text-sm text-center" style={{animationDelay: '160ms'}} href="https://github.com/Prakash2459" target="_blank" rel="noreferrer noopener" aria-label="View GitHub profile">💻 GitHub</a>
+      </nav>
+
+      {/* Professional Summary */}
+      <section className="mb-8 card p-6 fade-in-up" style={{animationDelay: '120ms'}} id="summary">
+        <h2 className="text-lg font-semibold tracking-tight">Professional Summary</h2>
         <p className="mt-2 text-sm text-black/80 dark:text-white/80">
-          I’m a Computer Science Engineering graduate with a passion for technology and problem-solving. I have hands‑on
-          experience in programming, embedded systems, cybersecurity, and full‑stack development, and I thrive on projects that
-          blend hardware with software. As a collaborative team member, I contribute effectively to group success and love bringing
-          ideas to life together.
+          <strong>Jambula Venkata Jaya Prakash Reddy</strong> is a dedicated Computer Science Engineering graduate with extensive expertise in 
+          <a href="#skills" className="text-blue-600 dark:text-blue-400 hover:underline"> programming</a>, 
+          <a href="#projects" className="text-blue-600 dark:text-blue-400 hover:underline"> embedded systems</a>, 
+          cybersecurity, and full-stack development. With hands-on experience in IoT, blockchain technology, and machine learning applications, 
+          I specialize in creating innovative solutions that bridge hardware and software domains.
+        </p>
+        <p className="mt-3 text-sm text-black/80 dark:text-white/80">
+          My technical journey spans from developing cost-effective firewall solutions on Raspberry Pi to implementing blockchain-based 
+          secure storage systems. I excel in collaborative environments and have a proven track record of winning hackathons and 
+          innovation competitions, demonstrating my ability to transform complex ideas into practical, scalable solutions.
+        </p>
+        <p className="mt-3 text-sm text-black/80 dark:text-white/80">
+          Currently working as a <strong>Raspberry Pi Developer</strong> at Neonflake Enterprises, I continue to expand my expertise 
+          in embedded systems, mobile app development with Flutter, and AI model fine-tuning while pursuing opportunities in 
+          software engineering and technology innovation.
         </p>
       </section>
 
+      {/* Skills and Education Section */}
       <section className="mb-8 grid gap-6 md:grid-cols-2">
-        <div className="card p-6 fade-in-up" style={{animationDelay: '180ms'}}>
-          <h3 className="text-base font-semibold">Skills</h3>
-          <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-sm text-black/80 dark:text-white/80">
-            <li>C, C++, Java, Python, Embedded C (Arduino C)</li>
-            <li>HTML, CSS, JavaScript, FastAPI, Django, PostgreSQL</li>
-            <li>Raspberry Pi, ESP8266, Arduino, BLDC Motor Control (ODrive/ODESC)</li>
-            <li>ML Firewalls, ipfire, iptables, Nginx, Docker</li>
-            <li>Cloud concepts, Virtualization, DNS configuration</li>
-          </ul>
+        <div className="card p-6 fade-in-up" style={{animationDelay: '180ms'}} id="skills">
+          <h3 className="text-base font-semibold">Technical Skills & Expertise</h3>
+          <div className="mt-3 space-y-3">
+            <div>
+              <h4 className="text-sm font-medium text-black/90 dark:text-white/90">Programming Languages</h4>
+              <p className="text-sm text-black/80 dark:text-white/80">C, C++, Java, Python, Embedded C (Arduino C), JavaScript, HTML, CSS</p>
+            </div>
+            <div>
+              <h4 className="text-sm font-medium text-black/90 dark:text-white/90">Web Development & Frameworks</h4>
+              <p className="text-sm text-black/80 dark:text-white/80">FastAPI, Django, Next.js, React, PostgreSQL, SQLite, RESTful APIs</p>
+            </div>
+            <div>
+              <h4 className="text-sm font-medium text-black/90 dark:text-white/90">Embedded Systems & IoT</h4>
+              <p className="text-sm text-black/80 dark:text-white/80">Raspberry Pi, ESP8266, ESP32, Arduino, BLDC Motor Control (ODrive/ODESC), Sensor Integration</p>
+            </div>
+            <div>
+              <h4 className="text-sm font-medium text-black/90 dark:text-white/90">DevOps & Infrastructure</h4>
+              <p className="text-sm text-black/80 dark:text-white/80">Docker, Nginx, iptables, Cloud Computing, Virtualization, DNS Configuration</p>
+            </div>
+            <div>
+              <h4 className="text-sm font-medium text-black/90 dark:text-white/90">Cybersecurity & Networking</h4>
+              <p className="text-sm text-black/80 dark:text-white/80">ML Firewalls, ipfire, Network Security, Intrusion Detection, Packet Analysis</p>
+            </div>
+          </div>
         </div>
-        <div className="card p-6 fade-in-up" style={{animationDelay: '220ms'}}>
-          <h3 className="text-base font-semibold">Education</h3>
+        <div className="card p-6 fade-in-up" style={{animationDelay: '220ms'}} id="education">
+          <h3 className="text-base font-semibold">Educational Background</h3>
           <div className="mt-3 space-y-2 text-sm text-black/80 dark:text-white/80">
             <div>
               <div className="flex items-baseline justify-between">
@@ -55,8 +85,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mb-8 card p-6 fade-in-up" style={{animationDelay: '260ms'}}>
-        <h3 className="text-base font-semibold">Projects</h3>
+      {/* Featured Projects Portfolio */}
+      <section className="mb-8 card p-6 fade-in-up" style={{animationDelay: '260ms'}} id="projects">
+        <h3 className="text-base font-semibold">Featured Projects & Portfolio</h3>
+        <p className="mt-2 text-sm text-black/70 dark:text-white/70 mb-4">
+          Explore my comprehensive portfolio of innovative projects spanning blockchain technology, IoT systems, 
+          machine learning applications, and embedded systems development. Each project demonstrates practical 
+          problem-solving skills and technical expertise in modern software and hardware integration.
+        </p>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div>
             <div className="flex items-baseline justify-between">
@@ -164,36 +200,98 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mb-8 card p-6 fade-in-up" style={{animationDelay: '300ms'}}>
-        <h3 className="text-base font-semibold">Achievements & Awards</h3>
-        <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80">
-          <li>1st Place – Intra Institution Innovation Competition and Hackathon (MGIT, 2023)</li>
-          <li>1st Place – Idea Pitching Contest at Idea Incubator (MGIT, 2023)</li>
-          <li>2nd Place – Smart India Hackathon 2023 (Finals)</li>
+      {/* Achievements and Recognition */}
+      <section className="mb-8 card p-6 fade-in-up" style={{animationDelay: '300ms'}} id="achievements">
+        <h3 className="text-base font-semibold">Achievements & Recognition</h3>
+        <p className="mt-2 text-sm text-black/70 dark:text-white/70 mb-3">
+          Recognition for innovation, technical excellence, and competitive programming achievements in national-level competitions and hackathons.
+        </p>
+        <ul className="mt-2 list-disc pl-5 text-sm text-black/80 dark:text-white/80 space-y-1">
+          <li><strong>1st Place</strong> – Intra Institution Innovation Competition and Hackathon (MGIT, 2023)</li>
+          <li><strong>1st Place</strong> – Idea Pitching Contest at Idea Incubator (MGIT, 2023)</li>
+          <li><strong>2nd Place</strong> – Smart India Hackathon 2023 (Finals) - National Level Competition</li>
         </ul>
+        <p className="mt-3 text-sm text-black/70 dark:text-white/70">
+          These achievements demonstrate my ability to innovate under pressure, collaborate effectively in team environments, 
+          and deliver practical solutions to real-world problems within tight deadlines.
+        </p>
       </section>
 
-      <section className="mb-2 card p-6 fade-in-up" style={{animationDelay: '340ms'}}>
-        <h3 className="text-base font-semibold">Internship</h3>
+      {/* Professional Experience */}
+      <section className="mb-8 card p-6 fade-in-up" style={{animationDelay: '340ms'}} id="experience">
+        <h3 className="text-base font-semibold">Professional Experience</h3>
         <div className="mt-2 text-sm text-black/80 dark:text-white/80">
           <div className="flex items-baseline justify-between">
             <span className="font-medium">Neonflake Enterprises OPC Pvt Ltd, Hyderabad</span>
             <span className="text-xs text-black/60 dark:text-white/60">Raspberry Pi Developer · Ongoing</span>
           </div>
-          <p className="mt-1">
-            I design and build embedded systems and Raspberry Pi projects, develop websites and Android apps with Flutter, and fine‑tune AI models.
+          <p className="mt-2">
+            As a <strong>Raspberry Pi Developer</strong>, I specialize in designing and building embedded systems and IoT solutions. 
+            My responsibilities include developing cross-platform websites and Android applications using Flutter framework, 
+            fine-tuning AI models for specific use cases, and creating innovative hardware-software integration solutions.
+          </p>
+          <p className="mt-2">
+            Key contributions include optimizing embedded system performance, implementing real-time data processing solutions, 
+            and developing user-friendly interfaces for complex technical systems. This role has enhanced my expertise in 
+            embedded programming, mobile development, and artificial intelligence applications.
           </p>
         </div>
       </section>
 
-      <section className="mb-2 card p-6 fade-in-up" style={{animationDelay: '380ms'}}>
-        <h3 className="text-base font-semibold">GitHub</h3>
-        <p className="mt-2 text-sm text-black/80 dark:text-white/80">
-          Explore more projects and code on my GitHub profile.
+      {/* Social Media and Portfolio Links */}
+      <section className="mb-8 card p-6 fade-in-up" style={{animationDelay: '380ms'}} id="portfolio">
+        <h3 className="text-base font-semibold">Portfolio & Social Media</h3>
+        <p className="mt-2 text-sm text-black/80 dark:text-white/80 mb-4">
+          Connect with me on various platforms to explore my projects, contributions, and professional journey. 
+          Follow my work and stay updated with my latest innovations in technology and software development.
         </p>
-        <div className="mt-3">
-          <a className="inline-flex items-center gap-2 rounded-full border border-black/[.08] dark:border-white/[.145] px-4 py-2 text-sm hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a]" href="https://github.com/Prakash2459" target="_blank" rel="noreferrer noopener">
-            github.com/Prakash2459
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <a className="inline-flex items-center gap-2 rounded-full border border-black/[.08] dark:border-white/[.145] px-4 py-2 text-sm hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a]" 
+             href="https://github.com/Prakash2459" target="_blank" rel="noreferrer noopener"
+             aria-label="View GitHub profile and repositories">
+            🐙 GitHub Profile
+          </a>
+          <a className="inline-flex items-center gap-2 rounded-full border border-black/[.08] dark:border-white/[.145] px-4 py-2 text-sm hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a]" 
+             href="https://www.linkedin.com/in/jambula-venkata-jaya-prakash-reddy" target="_blank" rel="noreferrer noopener"
+             aria-label="Connect on LinkedIn">
+            💼 LinkedIn
+          </a>
+          <a className="inline-flex items-center gap-2 rounded-full border border-black/[.08] dark:border-white/[.145] px-4 py-2 text-sm hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a]" 
+             href="https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20resume%20website%20by%20Jambula%20Venkata%20Jaya%20Prakash%20Reddy&url=" target="_blank" rel="noreferrer noopener"
+             aria-label="Share on Twitter">
+            🐦 Share on Twitter
+          </a>
+          <a className="inline-flex items-center gap-2 rounded-full border border-black/[.08] dark:border-white/[.145] px-4 py-2 text-sm hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a]" 
+             href="mailto:?subject=Check%20out%20this%20resume&body=I%20found%20this%20impressive%20resume%20website%20by%20Jambula%20Venkata%20Jaya%20Prakash%20Reddy"
+             aria-label="Share via email">
+            📧 Share via Email
+          </a>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="mb-2 card p-6 fade-in-up bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20" style={{animationDelay: '420ms'}} id="contact">
+        <h3 className="text-base font-semibold">Let&apos;s Connect & Collaborate</h3>
+        <p className="mt-2 text-sm text-black/80 dark:text-white/80">
+          I&apos;m always interested in discussing new opportunities, innovative projects, and potential collaborations. 
+          Whether you&apos;re looking for a skilled developer, have an exciting project idea, or want to explore 
+          technology solutions, I&apos;d love to hear from you.
+        </p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <a href="mailto:prakashprakash2459@gmail.com" 
+             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+             aria-label="Send email to start a conversation">
+            📧 Get In Touch
+          </a>
+          <a href="tel:+919347026387" 
+             className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+             aria-label="Call for immediate discussion">
+            📞 Call Now
+          </a>
+          <a href="https://www.jayaprakash.space" target="_blank" rel="noreferrer noopener"
+             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+             aria-label="Visit personal website for more information">
+            🌐 Visit Website
           </a>
         </div>
       </section>

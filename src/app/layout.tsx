@@ -13,14 +13,119 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jambula Venkata Jaya Prakash Reddy | Resume",
-  description: "Resume of Jambula Venkata Jaya Prakash Reddy — Computer Science Engineer",
-  openGraph: {
-    title: "Jambula Venkata Jaya Prakash Reddy | Resume",
-    description: "Resume of Jambula Venkata Jaya Prakash Reddy — Computer Science Engineer",
-    url: "/",
-    type: "website",
+  title: "Jambula Venkata Jaya Prakash Reddy | Resume - Computer Science Engineer & Full Stack Developer",
+  description: "Professional resume of Jambula Venkata Jaya Prakash Reddy, Computer Science Engineer specializing in embedded systems, IoT, blockchain technology, machine learning, and full-stack development. Winner of multiple hackathons with expertise in Python, Java, React, and Raspberry Pi development.",
+  keywords: [
+    "Jambula Venkata Jaya Prakash Reddy",
+    "Computer Science Engineer",
+    "Full Stack Developer",
+    "Embedded Systems",
+    "IoT Developer",
+    "Blockchain Developer",
+    "Machine Learning",
+    "Raspberry Pi Developer",
+    "Python Developer",
+    "React Developer",
+    "Resume",
+    "Portfolio",
+    "Software Engineer",
+    "Hyderabad",
+    "India"
+  ],
+  authors: [{ name: "Jambula Venkata Jaya Prakash Reddy" }],
+  creator: "Jambula Venkata Jaya Prakash Reddy",
+  publisher: "Jambula Venkata Jaya Prakash Reddy",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.jayaprakash.space",
+    title: "Jambula Venkata Jaya Prakash Reddy | Professional Resume & Portfolio",
+    description: "Explore the professional journey of Jambula Venkata Jaya Prakash Reddy - Computer Science Engineer, Full Stack Developer, and IoT specialist. Discover innovative projects in blockchain, machine learning, and embedded systems.",
+    siteName: "Jambula Venkata Jaya Prakash Reddy - Resume",
+    images: [
+      {
+        url: "/apple-touch-icon.png",
+        width: 180,
+        height: 180,
+        alt: "Jambula Venkata Jaya Prakash Reddy Profile",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jambula Venkata Jaya Prakash Reddy | Computer Science Engineer",
+    description: "Professional resume showcasing expertise in embedded systems, IoT, blockchain, and full-stack development.",
+    images: ["/apple-touch-icon.png"],
+    creator: "@jayaprakashreddy",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
+  other: {
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "Jaya Prakash Resume",
+  },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jambula Venkata Jaya Prakash Reddy",
+  "jobTitle": "Computer Science Engineer & Full Stack Developer",
+  "description": "Computer Science Engineer specializing in embedded systems, IoT, blockchain technology, and full-stack development",
+  "url": "https://www.jayaprakash.space",
+  "email": "prakashprakash2459@gmail.com",
+  "telephone": "+91-93470-26387",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hyderabad",
+    "addressCountry": "India"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Mahatma Gandhi Institute of Technology"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Neonflake Enterprises OPC Pvt Ltd"
+  },
+  "knowsAbout": [
+    "Computer Science",
+    "Embedded Systems",
+    "IoT Development",
+    "Blockchain Technology",
+    "Machine Learning",
+    "Full Stack Development",
+    "Python Programming",
+    "Java Programming",
+    "React Development",
+    "Raspberry Pi Development"
+  ],
+  "award": [
+    "1st Place - Intra Institution Innovation Competition and Hackathon (MGIT, 2023)",
+    "1st Place - Idea Pitching Contest at Idea Incubator (MGIT, 2023)",
+    "2nd Place - Smart India Hackathon 2023 (Finals)"
+  ],
+  "sameAs": [
+    "https://github.com/Prakash2459",
+    "https://www.jayaprakash.space",
+    "https://www.linkedin.com/in/jambula-venkata-jaya-prakash-reddy"
+  ]
 };
 
 export default function RootLayout({
@@ -30,6 +135,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="min-h-screen text-foreground">
           <header className="sticky top-0 z-10 glass border-b border-black/[.08] dark:border-white/[.145]">
